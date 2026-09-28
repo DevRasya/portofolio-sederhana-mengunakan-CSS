@@ -1,0 +1,369 @@
+/* =========================================================
+  TUGAS MAHASISWA
+  Tuliskan CSS Anda di file ini.
+  Jangan mengubah struktur HTML kecuali diminta dosen.
+   ========================================================= */
+
+/* 1. Buat CSS Variables pada :root */
+
+:root {
+  --primary: #00ff66;
+  --primary-dark: #00cc52;
+  --accent: #003b00;
+  --text: #00ff66;
+  --muted: #008f39;
+  --background: #0d0d0d;
+  --white: #1a1a1a;
+  --border: #00ff66;
+  --radius: 8px;
+  --shadow: 0 0 15px rgba(0, 255, 102, 0.2);
+}
+
+
+
+/* 2. Atur reset sederhana dan body */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: var(--background);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none; 
+}
+
+/* 3. Gunakan FLEXBOX untuk .site-header, .brand, dan .nav-menu */
+.site-header {
+  max-width: 1100px;
+  margin: 18px auto;
+  padding: 14px 24px;
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.brand {
+  display: flex;          
+  align-items: center;
+  gap: 12px;   
+}
+
+.brand .logo {
+  width: 40px;
+  height: 40px;
+  background: var(--primary);
+  color: var(--white);
+  border-radius: 10px;
+  display: flex;        
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.brand h1 {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.brand p {
+  margin: 0;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.nav-menu {
+  display: flex;
+  gap: 24px;
+  font-weight: 600;
+}
+
+.nav-menu a:hover {
+  color: var(--primary);  
+}
+
+/* 4. Atur .container dan HERO */
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.hero-text {
+  flex: 1; 
+}
+
+.hero-text h2 {
+  font-size: 32px;
+  margin: 12px 0;
+  line-height: 1.3;
+}
+
+.btn-primary {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 12px 24px;
+  background: var(--primary);
+  color: var(--white);
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+.hero-card {
+  flex: 0 0 300px;
+  background: var(--white);
+  padding: 24px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.small-label {
+  font-size: 11px;
+  font-weight: bold;
+  color: var(--muted);
+  letter-spacing: 0.5px;
+  margin: 0 0 8px 0;
+}
+
+.progress-number {
+  font-size: 36px;
+  font-weight: bold;
+  color: var(--primary);
+}
+
+
+/* 5. Gunakan FLEXBOX pada .hero */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  margin: 40px 0;
+}
+
+/* 6. Buat progress bar */
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: var(--border);
+  border-radius: 4px;
+  margin: 12px 0;
+  overflow: hidden;
+}
+
+.progress-bar span {
+  display: block;
+  height: 100%;
+  background: var(--primary);
+  border-radius: 4px;
+}
+
+/* 7. Gunakan CSS GRID pada .card-grid */
+.material-section {
+  margin: 60px 0;
+}
+
+.section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 24px;
+}
+
+.eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.info-chip {
+  background: var(--primary);
+  color:var(--white);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px; /* Jarak antar kartu */
+}
+
+/* 8. Atur tampilan .material-card */
+.material-card {
+  background: var(--white);
+  padding: 24px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  position: relative; /* Wajib diset relative agar child bertipe absolute (seperti ::before) acuan posisinya ke kartu ini */
+}
+
+.icon-box {
+  width: 36px;
+  height: 36px;
+  background: var(--background);
+  color: var(--primary);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.level {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.material-card h3 {
+  margin: 8px 0;
+}
+
+.material-card a {
+  display: inline-block;
+  margin-top: 12px;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* 9. Tambahkan pseudo-element ::before pada .featured */
+.material-card.featured {
+  border-color: var(--primary);
+}
+
+.material-card.featured::before {
+  content: "Populer";
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  background: var(--primary);
+  color: var(--white);
+  font-size: 11px;
+  padding: 2px 10px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+/* 10. Buat efek :hover + transition + transform pada kartu */
+.material-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.material-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow);
+}
+
+/* 11. Buat animasi sederhana untuk .badge */
+.badge {
+  display: inline-block;
+  background: var(--primary);
+  color: var(--white);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+
+  animation: pulse 2s infinite ease-in-out;
+}
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+
+
+/* 12. Atur section challenge dan footer */
+
+.challenge {
+  background: var(--white);
+  padding: 30px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.btn-secondary {
+  padding: 10px 20px;
+  background: transparent;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: var(--primary);
+  color: var(--white);
+}
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  padding: 30px 20px;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+  font-size: 14px;
+}
+/* 13. Buat media query untuk layar <= 700px */
+@media (max-width: 700px) {
+  .site-header,
+  .hero,
+  .challenge {
+    flex-direction: column; 
+    text-align: center;
+  }
+
+  .brand, 
+  .nav-menu {
+    margin-bottom: 12px;
+  }
+
+
+  .hero-card {
+    width: 100%;
+  }
+
+  .section-title {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+}

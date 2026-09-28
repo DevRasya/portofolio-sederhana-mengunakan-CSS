@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas CSS Lanjutan - WebClass</title>
+    <link rel="stylesheet" href="style_tugas.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="brand">
+            <div class="logo">W</div>
+            <div>
+                <h1>WebClass</h1>
+                <p>Belajar CSS dengan praktik</p>
+            </div>
+        </div>
+
+        <nav class="nav-menu">
+            <a href="#materi">Materi</a>
+            <a href="#progress">Progress</a>
+            <a href="#profil">Profil</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <div class="hero-text">
+                <span class="badge">CSS Lanjutan • Level Medium</span>
+                <h2>Buat tampilan web yang rapi, interaktif, dan responsif.</h2>
+                <p>Latih Flexbox, Grid, pseudo-class, pseudo-element, transition, transform, animation, dan media query
+                    dalam satu halaman sederhana.</p>
+                <a class="btn-primary" href="#materi">Mulai Belajar</a>
+            </div>
+
+            <div class="hero-card">
+                <p class="small-label">PROGRESS BELAJAR</p>
+                <div class="progress-number">75%</div>
+                <div class="progress-bar"><span></span></div>
+                <p>6 dari 8 materi telah diselesaikan.</p>
+            </div>
+        </section>
+
+        <section id="materi" class="material-section">
+            <div class="section-title">
+                <div>
+                    <p class="eyebrow">MATERI PILIHAN</p>
+                    <h2>CSS yang akan dipraktikkan</h2>
+                </div>
+                <span class="info-chip">4 Topik</span>
+            </div>
+
+            <div class="card-grid">
+                <article class="material-card featured">
+                    <div class="icon-box">F</div>
+                    <span class="level">Layout</span>
+                    <h3>Flexbox</h3>
+                    <p>Menyusun elemen secara horizontal atau vertikal dengan mudah.</p>
+                    <a href="#">Pelajari →</a>
+                </article>
+
+                <article class="material-card">
+                    <div class="icon-box">G</div>
+                    <span class="level">Layout</span>
+                    <h3>CSS Grid</h3>
+                    <p>Membuat susunan kolom dan baris untuk tampilan kartu.</p>
+                    <a href="#">Pelajari →</a>
+                </article>
+
+                <article class="material-card">
+                    <div class="icon-box">H</div>
+                    <span class="level">Interaksi</span>
+                    <h3>Hover & Transition</h3>
+                    <p>Memberikan perubahan halus saat pengguna menunjuk elemen.</p>
+                    <a href="#">Pelajari →</a>
+                </article>
+
+                <article class="material-card">
+                    <div class="icon-box">R</div>
+                    <span class="level">Responsive</span>
+                    <h3>Media Query</h3>
+                    <p>Menyesuaikan tampilan agar nyaman di desktop dan smartphone.</p>
+                    <a href="#">Pelajari →</a>
+                </article>
+            </div>
+        </section>
+
+        <section id="progress" class="challenge">
+            <div>
+                <p class="eyebrow">MINI CHALLENGE</p>
+                <h2>Target tugas Anda</h2>
+                <p>Buat CSS sehingga halaman ini menyerupai gambar contoh, lalu tambahkan efek hover pada kartu dan
+                    tombol.</p>
+            </div>
+            <button class="btn-secondary">Lihat Petunjuk</button>
+        </section>
+    </main>
+
+    <footer id="profil" class="site-footer">
+        <p>Workshop Desain Web • Praktikum CSS Lanjutan</p>
+        <p>HTML disediakan — CSS ditulis oleh mahasiswa.</p>
+    </footer>
+</body>
+
+</html>
